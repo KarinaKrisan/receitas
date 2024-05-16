@@ -13,90 +13,111 @@
     <title>Receitas</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        .titulo {
-            text-align: center;
-            margin-bottom: 30px; /* Adiciona espaço abaixo do título */
-        }
-        
-        .pagina {
-            background-color: #f2f2f2; /* Cor de fundo da página */
-            position: relative;
-            min-height: 100vh; /* Mantém o footer na parte inferior */
-        }
+    .titulo {
+        text-align: center;
+        margin-bottom: 30px; /* Adiciona espaço abaixo do título */
+    }
 
+    .pagina {
+        background-color: #f2f2f2; /* Cor de fundo da página */
+        position: relative;
+        min-height: 100vh; /* Mantém o footer na parte inferior */
+    }
+
+    .search-bar {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    .search-bar input[type="text"] {
+        padding: 6px 20px;
+        width: 200px;
+        border-radius: 20px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        background-image: url('https://image.flaticon.com/icons/svg/483/483356.svg');
+        background-position: 180px 6px;
+        background-repeat: no-repeat;
+    }
+
+    .search-bar button {
+        padding: 6px 15px;
+        border: none;
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    .btn-rounded {
+        border-radius: 20px; /* Torna o botão redondinho */
+    }
+
+    .contato-link {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    /* Diminui o tamanho das imagens das receitas */
+    .card-img-top {
+        height: 150px; /* Reduzindo a altura da imagem */
+        object-fit: cover;
+    }
+
+    /* Adiciona uma borda preta em volta de cada card */
+    .card {
+        border: 2px solid #aaa; /* Modifica a cor da borda */
+    }
+
+    /* Reduz o tamanho dos cards */
+    .card-body {
+        padding: 10px; /* Reduzindo o espaço interno */
+    }
+
+    .card-title {
+        font-size: 18px; /* Reduzindo o tamanho do título */
+    }
+
+    .card-text {
+        font-size: 14px; /* Reduzindo o tamanho do texto */
+    }
+
+    /* Estilo para o texto de erro */
+    .text-danger {
+        color: red;
+        font-weight: bold;
+    }
+
+    /* Classe para centralizar texto */
+    .centralizado {
+        text-align: center;
+    }
+
+    /* Estilos para telas menores ou iguais a 768px (celulares) */
+    @media (max-width: 768px) {
         .search-bar {
-            position: absolute;
-            top: 10px;
-            right: 10px;
+            position: relative;
+            top: auto;
+            right: auto;
+            text-align: center;
+            margin-bottom: 10px; /* Adiciona espaço abaixo da barra de pesquisa */
         }
 
         .search-bar input[type="text"] {
-            padding: 6px 20px;
-            width: 200px;
-            border-radius: 20px;
-            border: 1px solid #ccc;
-            background-color: #fff;
-            background-image: url('https://image.flaticon.com/icons/svg/483/483356.svg');
-            background-position: 180px 6px;
-            background-repeat: no-repeat;
+            width: calc(100% - 40px); /* Para deixar espaço para o ícone de pesquisa */
+            margin-bottom: 10px;
         }
 
         .search-bar button {
-            padding: 6px 15px;
-            border: none;
-            background-color: #007bff;
-            color: #fff;
-            border-radius: 20px;
-            cursor: pointer;
+            display: none; /* Esconde o botão de buscar */
         }
+    }
+</style>
 
-        .btn-rounded {
-            border-radius: 20px; /* Torna o botão redondinho */
-        }
-
-        .contato-link {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            text-align: center;
-        }
-
-        /* Diminui o tamanho das imagens das receitas */
-        .card-img-top {
-            height: 150px; /* Reduzindo a altura da imagem */
-            object-fit: cover;
-        }
-
-        /* Adiciona uma borda preta em volta de cada card */
-        .card {
-            border: 2px solid #aaa; /* Modifica a cor da borda */
-        }
-
-        /* Reduz o tamanho dos cards */
-        .card-body {
-            padding: 10px; /* Reduzindo o espaço interno */
-        }
-
-        .card-title {
-            font-size: 18px; /* Reduzindo o tamanho do título */
-        }
-
-        .card-text {
-            font-size: 14px; /* Reduzindo o tamanho do texto */
-        }
-
-        /* Estilo para o texto de erro */
-        .text-danger {
-            color: red;
-            font-weight: bold;
-        }
-
-        /* Classe para centralizar texto */
-        .centralizado {
-            text-align: center;
-        }
-    </style>
 </head>
 <body class="pagina"> <!-- Adiciona a classe à tag body -->
 
