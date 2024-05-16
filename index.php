@@ -89,7 +89,7 @@
 
 <div class="container">
     <h1 class="titulo">Receitas</h1> <!-- Título centralizado -->
-    
+    <br>
     <!-- Barra de pesquisa -->
     <div class="search-bar">
         <form method="GET">
