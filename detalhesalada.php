@@ -8,12 +8,13 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <style>
     .pagina {
-      background-color: #f2f2f2; /* Cor de fundo da página */
+      background-color: #fff; /* Cor de fundo da página */
       height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      background-image: url("img/Baked.jpg");
     }
 
     .titulo {

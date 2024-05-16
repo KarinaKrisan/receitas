@@ -8,12 +8,13 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <style>
     .pagina {
-      background-color: #f2f2f2; /* Cor de fundo da página */
+      background-color: #fff; /* Cor de fundo da página */
       height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      background-image: url("img/Baked.jpg");
     }
 
     .titulo {
@@ -36,6 +37,20 @@
       padding: 20px; /* Espaçamento interno */
       border-radius: 10px; /* Borda arredondada */
       margin-bottom: 20px; /* Espaço abaixo dos ingredientes */
+      position: relative; /* Define a posição relativa para o elemento pai */
+    }
+
+    .imagem-bolo {
+      width: 150px; /* Reduzindo o tamanho da imagem */
+      height: 150px; /* Reduzindo o tamanho da imagem */
+      border-radius: 50%; /* Torna o elemento redondo */
+      background-image: url("img/bolo.jpg"); /* Imagem do bolo */
+      background-size: cover; /* Ajusta a imagem para cobrir todo o elemento */
+      background-position: center; /* Centraliza a imagem */
+      position: absolute; /* Altera a posição */
+      right: 20px; /* Centraliza à direita */
+      top: 50%; /* Alinha ao meio verticalmente */
+      transform: translateY(-50%); /* Ajusta a posição vertical */
     }
   </style>
 </head>
@@ -58,6 +73,7 @@
               <li>3 ovos</li>
               <li>1/2 xícara de manteiga</li>
             </ul>
+            <div class="imagem-bolo"></div> <!-- Novo div para a imagem do bolo -->
           </div>
           <div class="instrucoes">
             <h5>Modo de Preparo:</h5>

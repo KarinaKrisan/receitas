@@ -21,9 +21,20 @@
             margin-top: 10px;
             color: green;
         }
+
+        /* Novo CSS adicionado */
+        .pagina {
+            background-color: #fff; /* Cor de fundo da página */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-image: url("img/Baked.jpg");
+        }
     </style>
 </head>
-<body>
+<body class="pagina"> <!-- Adicionei a classe "pagina" para aplicar o novo estilo -->
     <div class="container">
         <div class="title-container">
             <h1>Fale Conosco</h1>

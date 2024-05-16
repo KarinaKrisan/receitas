@@ -16,12 +16,14 @@
     .titulo {
         text-align: center;
         margin-bottom: 30px; /* Adiciona espaço abaixo do título */
+        color: #000;
     }
 
     .pagina {
-        background-color: #f2f2f2; /* Cor de fundo da página */
+        background-color: #fff; /* Cor de fundo modificada para #aaa */
         position: relative;
         min-height: 100vh; /* Mantém o footer na parte inferior */
+        background-image: url("img/Baked.jpg");
     }
 
     .search-bar {
@@ -34,7 +36,7 @@
         padding: 6px 20px;
         width: 200px;
         border-radius: 20px;
-        border: 1px solid #ccc;
+        border: 1px solid #000;
         background-color: #fff;
         background-image: url('https://image.flaticon.com/icons/svg/483/483356.svg');
         background-position: 180px 6px;
@@ -68,7 +70,7 @@
         object-fit: cover;
     }
 
-    /* Adiciona uma borda preta em volta de cada card */
+    /* Adiciona uma borda branca em volta de cada card */
     .card {
         border: 2px solid #aaa; /* Modifica a cor da borda */
     }

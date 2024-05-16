@@ -8,12 +8,13 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <style>
     .pagina {
-      background-color: #f2f2f2; /* Cor de fundo da página */
+      background-color: #fff; /* Cor de fundo da página */
       height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      background-image: url("img/Baked.jpg");
     }
 
     .titulo {
@@ -36,6 +37,20 @@
       padding: 20px; /* Espaçamento interno */
       border-radius: 10px; /* Borda arredondada */
       margin-bottom: 20px; /* Espaço abaixo dos ingredientes */
+      position: relative; /* Define a posição relativa para o elemento pai */
+    }
+
+    .imagem-salada {
+      width: 150px; /* Define a largura da imagem */
+      height: 150px; /* Define a altura da imagem */
+      border-radius: 50%; /* Torna o elemento redondo */
+      background-image: url("img/saladac.jpg"); /* Imagem da salada Caesar */
+      background-size: cover; /* Ajusta a imagem para cobrir todo o elemento */
+      background-position: center; /* Centraliza a imagem */
+      position: absolute; /* Define a posição absoluta */
+      right: 20px; /* Define a posição à direita */
+      top: 50%; /* Define a posição verticalmente ao meio */
+      transform: translateY(-50%); /* Ajusta a posição vertical */
     }
   </style>
 </head>
@@ -63,6 +78,7 @@
               <li>1 colher de sopa de mostarda Dijon</li>
               <li>Sal e pimenta a gosto</li>
             </ul>
+            <div class="imagem-salada"></div> <!-- Div para a imagem da salada Caesar -->
           </div>
           <div class="instrucoes">
             <h5>Modo de Preparo:</h5>
