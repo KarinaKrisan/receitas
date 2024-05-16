@@ -37,6 +37,20 @@
       padding: 20px; /* Espaçamento interno */
       border-radius: 10px; /* Borda arredondada */
       margin-bottom: 20px; /* Espaço abaixo dos ingredientes */
+      position: relative; /* Define a posição relativa para o elemento pai */
+    }
+
+    .imagem-salada {
+      width: 150px; /* Define a largura da imagem */
+      height: 150px; /* Define a altura da imagem */
+      border-radius: 50%; /* Torna o elemento redondo */
+      background-image: url("img/salada.jpg"); /* Imagem da salada */
+      background-size: cover; /* Ajusta a imagem para cobrir todo o elemento */
+      background-position: center; /* Centraliza a imagem */
+      position: absolute; /* Define a posição absoluta */
+      right: 20px; /* Define a posição à direita */
+      top: 50%; /* Define a posição verticalmente ao meio */
+      transform: translateY(-50%); /* Ajusta a posição vertical */
     }
   </style>
 </head>
@@ -62,6 +76,7 @@
               <li>Suco de 1 limão</li>
               <li>2 colheres de sopa de mel</li>
             </ul>
+            <div class="imagem-salada"></div> <!-- Div para a imagem da salada -->
           </div>
           <div class="instrucoes">
             <h5>Modo de Preparo:</h5>
