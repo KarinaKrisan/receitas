@@ -52,6 +52,16 @@
       top: 50%; /* Define a posição verticalmente ao meio */
       transform: translateY(-50%); /* Ajusta a posição vertical */
     }
+
+    @media (max-width: 768px) {
+      .ingredientes {
+        margin-bottom: 0; /* Remove o espaço abaixo dos ingredientes */
+      }
+      
+      .imagem-strogonoff {
+        display: none; /* Esconde a imagem em dispositivos móveis */
+      }
+    }
   </style>
 </head>
 <body class="pagina">
