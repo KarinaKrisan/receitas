@@ -15,7 +15,6 @@
             background-color: #f2f2f2; /* Cor de fundo da página */
             position: relative;
             min-height: 100vh; /* Mantém o footer na parte inferior */
-            padding-bottom: 50px; /* Adiciona espaço para o footer */
         }
 
         .search-bar {
@@ -25,20 +24,18 @@
         }
 
         .search-bar input[type="text"] {
-            padding: 10px 20px;
+            padding: 6px 20px;
             width: 200px;
             border-radius: 20px;
             border: 1px solid #ccc;
             background-color: #fff;
             background-image: url('https://image.flaticon.com/icons/svg/483/483356.svg');
-            background-position: 95% 50%;
+            background-position: 180px 6px;
             background-repeat: no-repeat;
         }
 
         .search-bar button {
-            margin-top: 10px;
-            padding: 10px 15px;
-            width: 100px;
+            padding: 6px 15px;
             border: none;
             background-color: #007bff;
             color: #fff;
@@ -51,12 +48,10 @@
         }
 
         .contato-link {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: #333;
-            padding: 10px 0;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
             text-align: center;
         }
 
@@ -95,25 +90,24 @@
             text-align: center;
         }
 
-        /* Estilos responsivos */
-        @media screen and (max-width: 768px) {
+        /* Estilo para dispositivos móveis */
+        @media only screen and (max-width: 768px) {
             .search-bar {
-                position: relative;
-                top: auto;
-                right: auto;
-                margin-bottom: 20px;
+                position: static;
+                margin-bottom: 10px;
                 text-align: center;
             }
 
             .search-bar input[type="text"] {
-                width: calc(100% - 40px);
-                padding-left: 40px;
+                width: auto;
+                background-image: none;
+                padding: 6px 20px;
+                margin-right: 5px;
             }
 
             .search-bar button {
-                width: 40px;
-                padding: 10px;
-                background-color: transparent;
+                padding: 6px 10px;
+                margin-left: -5px;
             }
         }
     </style>
