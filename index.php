@@ -29,7 +29,7 @@
             array("title" => "Salada de Frutas", "image" => "img/Salada.jpg", "description" => "Uma refrescante salada de frutas.", "link" => "detalhesalada.php"),
             array("title" => "Coxinha", "image" => "img/coxinha.jpg", "description" => "Uma deliciosa coxinha.", "link" => "detalhescoxinha.php"),
             array("title" => "Strogonoff de Frango", "image" => "img/Strogonoff.jpg", "description" => "Uma ótima refeição para seu almoço", "link" => "detalhestrogonoff.php"),
-            array("title" => "Salada Caesar com Ovos", "image" => "img/Saladac.jpg", "description" => "Uma maneira diferente de comer salada.", "link" => "detalhessaladac.php")
+            array("title" => "Salada Caesar com Ovos", "image" => "img/Saladac.jpg", "description" => "Uma maneira diferente de comer salada.", "link" => "detalhesaladac.php")
         );
 
         // Loop pelas receitas e exibindo na página
