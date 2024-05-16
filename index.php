@@ -26,7 +26,7 @@
 
         .search-bar input[type="text"] {
             padding: 10px 20px;
-            width: 100%;
+            width: 200px;
             border-radius: 20px;
             border: 1px solid #ccc;
             background-color: #fff;
@@ -38,7 +38,7 @@
         .search-bar button {
             margin-top: 10px;
             padding: 10px 15px;
-            width: 100%;
+            width: 100px;
             border: none;
             background-color: #007bff;
             color: #fff;
@@ -99,20 +99,21 @@
         @media screen and (max-width: 768px) {
             .search-bar {
                 position: relative;
+                top: auto;
+                right: auto;
                 margin-bottom: 20px;
+                text-align: center;
             }
 
             .search-bar input[type="text"] {
                 width: calc(100% - 40px);
+                padding-left: 40px;
             }
 
             .search-bar button {
-                width: calc(100% - 40px);
-            }
-
-            .contato-link {
-                position: relative;
-                padding: 10px 0;
+                width: 40px;
+                padding: 10px;
+                background-color: transparent;
             }
         }
     </style>
