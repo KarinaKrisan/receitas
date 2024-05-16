@@ -52,6 +52,16 @@
       top: 50%; /* Define a posição verticalmente ao meio */
       transform: translateY(-50%); /* Ajusta a posição vertical */
     }
+
+    @media (max-width: 768px) {
+      .ingredientes {
+        margin-bottom: 0; /* Remove o espaço abaixo dos ingredientes */
+      }
+      
+      .imagem-salada {
+        display: none; /* Esconde a imagem em dispositivos móveis */
+      }
+    }
   </style>
 </head>
 <body class="pagina">
@@ -78,7 +88,7 @@
               <li>1 colher de sopa de mostarda Dijon</li>
               <li>Sal e pimenta a gosto</li>
             </ul>
-            <div class="imagem-salada"></div> <!-- Div para a imagem da salada Caesar -->
+            <div class="imagem-salada"></div> <!-- Novo div para a imagem da salada Caesar -->
           </div>
           <div class="instrucoes">
             <h5>Modo de Preparo:</h5>

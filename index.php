@@ -124,7 +124,7 @@
 <body class="pagina"> <!-- Adiciona a classe à tag body -->
 
 <div class="container">
-    <h1 class="titulo">Receitas</h1> <!-- Título centralizado -->
+    <h1 class="titulo">Receitinhas clássicas</h1> <!-- Título centralizado -->
     <br>
     <!-- Barra de pesquisa -->
     <div class="search-bar">
