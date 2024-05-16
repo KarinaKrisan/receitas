@@ -1,70 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contato</title>
-  <!-- Adicione os links para Bootstrap -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale Conosco</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Adicione seu estilo personalizado aqui, se necessário */
+        .title-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #successMessage {
+            display: none;
+            text-align: center;
+            margin-top: 10px;
+            color: green;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="title-container">
+            <h1>Fale Conosco</h1>
+        </div>
+        
+        <form id="contactForm" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensagem:</label>
+                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar <i class="fas fa-paper-plane"></i></button>
+            <a href="#" class="btn btn-secondary" onclick="history.back()">Voltar <i class="fas fa-arrow-left"></i></a>
+            <div id="successMessage"><i class="fas fa-check-circle"></i> Mensagem enviada com sucesso!</div>
+        </form>
+    </div>
 
-<div class="container mt-5">
-  <h1>Contato</h1>
-  <form id="contactForm" method="post" action="enviar_contato.php">
-    <div class="form-group">
-      <label for="nome">Nome:</label>
-      <input type="text" class="form-control" id="nome" name="nome" required>
-    </div>
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" name="email" required>
-    </div>
-    <div class="form-group">
-      <label for="mensagem">Mensagem:</label>
-      <textarea class="form-control" id="mensagem" name="mensagem" rows="5" required></textarea>
-    </div>
-    <div class="form-group">
-      <button type="submit" class="btn btn-primary mr-2">Enviar</button>
-      <a href="index.php" class="btn btn-secondary">Voltar à página inicial</a>
-    </div>
-  </form>
-  <div id="message" class="mt-3">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Adicione scripts de validação aqui, se necessário
+        $(document).ready(function() {
+            $('#contactForm').submit(function(e) {
+                e.preventDefault(); // Impede o envio padrão do formulário
+                $.ajax({
+                    type: 'POST',
+                    url: 'contato.php', // URL do próprio script PHP
+                    data: $(this).serialize(),
+                    success: function() {
+                        $('#successMessage').fadeIn().delay(5000).fadeOut(400, function() {
+                            window.location.href = 'contato.php'; // Redireciona de volta ao formulário
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
     <?php
-    // Verifica se a variável GET 'success' está definida e é true
-    if (isset($_GET['success']) && $_GET['success'] == 'true') {
-      echo '<div class="alert alert-success">Solicitação de contato realizada com sucesso. Entraremos em contato em breve!</div>';
-    } elseif (isset($_GET['success']) && $_GET['success'] == 'false') {
-      echo '<div class="alert alert-danger">Não foi possível realizar a solicitação de contato pois os campos se encontram vazios.</div>';
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $name = $_POST["name"];
+        $email = $_POST["email"];
+        $message = $_POST["message"];
+        
+        // Verifica se todos os campos foram preenchidos
+        if (!empty($name) && !empty($email) && !empty($message)) {
+            $formatted_message = "Nome: $name\nEmail: $email\nMensagem: $message\n\n";
+
+            // Verifica se a mensagem já existe no arquivo
+            $contents = file_get_contents("recebido.txt");
+            if (strpos($contents, $formatted_message) === false) {
+                // Se a mensagem não existe, adiciona ao arquivo
+                file_put_contents("recebido.txt", $formatted_message, FILE_APPEND);
+            }
+        }
     }
     ?>
-  </div>
-</div>
-
-<!-- Adicione os scripts do Bootstrap e do jQuery -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<!-- Adicione o script JavaScript -->
-<script>
-  $(document).ready(function() {
-    // Verificar se o formulário foi submetido com sucesso
-    function checkSuccess() {
-      if (window.location.href.indexOf("?success=true") !== -1) {
-        $('#message').html('<div class="alert alert-success">Solicitação de contato realizada com sucesso. Entraremos em contato em breve!</div>');
-        setTimeout(function() {
-          window.location.href = 'index.php'; // Redirecionar após 5 segundos
-        }, 5000); // Tempo em milissegundos (5 segundos)
-      } else if (window.location.href.indexOf("?success=false") !== -1) {
-        $('#message').html('<div class="alert alert-danger">Não foi possível realizar a solicitação de contato pois os campos se encontram vazios.</div>');
-      }
-    }
-
-    // Verificar se há mensagens após 1 segundo para garantir que tenham sido renderizadas
-    setTimeout(checkSuccess, 1000);
-  });
-</script>
-
 </body>
 </html>
