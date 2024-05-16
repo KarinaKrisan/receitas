@@ -1,8 +1,3 @@
-<!-- Karina de Oliveira Krisan  RA: 3020100204 -->
-<!-- Danilo Linguanote Borges   RA: 3024101630-->
-<!-- Luan Carlos de Andrade     RA: 3020106707 -->
-<!-- Ryan Araujo Palma          RA: 3020200955-->
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -20,6 +15,7 @@
             background-color: #f2f2f2; /* Cor de fundo da página */
             position: relative;
             min-height: 100vh; /* Mantém o footer na parte inferior */
+            padding-bottom: 50px; /* Adiciona espaço para o footer */
         }
 
         .search-bar {
@@ -29,18 +25,20 @@
         }
 
         .search-bar input[type="text"] {
-            padding: 6px 20px;
-            width: 200px;
+            padding: 10px 20px;
+            width: 100%;
             border-radius: 20px;
             border: 1px solid #ccc;
             background-color: #fff;
             background-image: url('https://image.flaticon.com/icons/svg/483/483356.svg');
-            background-position: 180px 6px;
+            background-position: 95% 50%;
             background-repeat: no-repeat;
         }
 
         .search-bar button {
-            padding: 6px 15px;
+            margin-top: 10px;
+            padding: 10px 15px;
+            width: 100%;
             border: none;
             background-color: #007bff;
             color: #fff;
@@ -53,10 +51,12 @@
         }
 
         .contato-link {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px 0;
             text-align: center;
         }
 
@@ -82,6 +82,38 @@
 
         .card-text {
             font-size: 14px; /* Reduzindo o tamanho do texto */
+        }
+
+        /* Estilo para o texto de erro */
+        .text-danger {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* Classe para centralizar texto */
+        .centralizado {
+            text-align: center;
+        }
+
+        /* Estilos responsivos */
+        @media screen and (max-width: 768px) {
+            .search-bar {
+                position: relative;
+                margin-bottom: 20px;
+            }
+
+            .search-bar input[type="text"] {
+                width: calc(100% - 40px);
+            }
+
+            .search-bar button {
+                width: calc(100% - 40px);
+            }
+
+            .contato-link {
+                position: relative;
+                padding: 10px 0;
+            }
         }
     </style>
 </head>
@@ -136,7 +168,7 @@
         
         // Se a receita não for encontrada, exibir mensagem
         if (!$found) {
-            echo '<p class="text-danger">Ooops! Não possuímos essa receita ainda.</p>';
+            echo '<p class="text-danger centralizado"><strong>Ooops! Não possuímos essa receita ainda.</strong></p>';
         }
     } else {
         // Se não houver pesquisa, exibir todas as receitas
