@@ -15,40 +15,14 @@
       align-items: center;
       flex-direction: column;
       background-image: url("img/Baked.jpg");
-      background-size: cover;
-    }
-
-    .titulo-imagem {
-      position: relative;
-      text-align: center;
     }
 
     .titulo {
+      text-align: center;
       margin-bottom: 10px; /* Adiciona espaço abaixo do título */
       color: white; /* Cor do texto */
       font-size: 36px; /* Tamanho da fonte */
       text-shadow: 2px 2px 4px #000000; /* Sombra do texto */
-    }
-
-    .imagem-salada {
-      width: 150px; /* Define a largura da imagem */
-      height: 150px; /* Define a altura da imagem */
-      border-radius: 50%; /* Torna o elemento redondo */
-      background-image: url("img/saladac.jpg"); /* Imagem da salada */
-      background-size: cover; /* Ajusta a imagem para cobrir todo o elemento */
-      background-position: center; /* Centraliza a imagem */
-      position: absolute; /* Define a posição absoluta */
-      right: 20px; /* Define a posição à direita */
-      top: 50%; /* Define a posição verticalmente ao meio */
-      transform: translateY(-50%); /* Ajusta a posição vertical */
-    }
-
-    @media (max-width: 768px) {
-      .imagem-salada {
-        width: 100px; /* Reduz a largura da imagem em dispositivos móveis */
-        height: 100px; /* Reduz a altura da imagem em dispositivos móveis */
-        right: 10px; /* Ajusta a posição da imagem à direita em dispositivos móveis */
-      }
     }
 
     .instrucoes {
@@ -66,9 +40,26 @@
       position: relative; /* Define a posição relativa para o elemento pai */
     }
 
+    .imagem-salada {
+      width: 150px; /* Define a largura da imagem */
+      height: 150px; /* Define a altura da imagem */
+      border-radius: 50%; /* Torna o elemento redondo */
+      background-image: url("img/saladac.jpg"); /* Imagem da salada Caesar */
+      background-size: cover; /* Ajusta a imagem para cobrir todo o elemento */
+      background-position: center; /* Centraliza a imagem */
+      position: absolute; /* Define a posição absoluta */
+      right: 20px; /* Define a posição à direita */
+      top: 50%; /* Define a posição verticalmente ao meio */
+      transform: translateY(-50%); /* Ajusta a posição vertical */
+    }
+
     @media (max-width: 768px) {
       .ingredientes {
         margin-bottom: 0; /* Remove o espaço abaixo dos ingredientes */
+      }
+      
+      .imagem-salada {
+        display: none; /* Esconde a imagem em dispositivos móveis */
       }
     }
   </style>
@@ -80,7 +71,6 @@
       <div class="col-md-8 offset-md-2">
         <div class="titulo-imagem">
           <h2 class="titulo">Salada Caesar com Ovos</h2>
-          <div class="imagem-salada"></div> <!-- Div para a imagem da salada -->
         </div>
         <hr>
         <div id="receita">
@@ -98,6 +88,7 @@
               <li>1 colher de sopa de mostarda Dijon</li>
               <li>Sal e pimenta a gosto</li>
             </ul>
+            <div class="imagem-salada"></div> <!-- Novo div para a imagem da salada Caesar -->
           </div>
           <div class="instrucoes">
             <h5>Modo de Preparo:</h5>
