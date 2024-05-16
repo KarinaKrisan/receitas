@@ -14,7 +14,6 @@
       align-items: center;
       flex-direction: column;
       background-image: url("img/Baked.jpg");
-      background-size: cover;
     }
 
     .titulo {
