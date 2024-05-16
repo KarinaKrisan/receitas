@@ -1,3 +1,8 @@
+<!-- Karina de Oliveira Krisan  RA: 3020100204 -->
+<!-- Danilo Linguanote Borges   RA: 3024101630-->
+<!-- Luan Carlos de Andrade     RA: 3020106707 -->
+<!-- Ryan Araujo Palma          RA: 3020200955-->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -43,6 +48,10 @@
             cursor: pointer;
         }
 
+        .btn-rounded {
+            border-radius: 20px; /* Torna o botão redondinho */
+        }
+
         .contato-link {
             position: absolute;
             bottom: 20px;
@@ -53,13 +62,26 @@
 
         /* Diminui o tamanho das imagens das receitas */
         .card-img-top {
-            height: 200px;
+            height: 150px; /* Reduzindo a altura da imagem */
             object-fit: cover;
         }
 
         /* Adiciona uma borda preta em volta de cada card */
         .card {
-            border: 2px solid #aaa;
+            border: 2px solid #aaa; /* Modifica a cor da borda */
+        }
+
+        /* Reduz o tamanho dos cards */
+        .card-body {
+            padding: 10px; /* Reduzindo o espaço interno */
+        }
+
+        .card-title {
+            font-size: 18px; /* Reduzindo o tamanho do título */
+        }
+
+        .card-text {
+            font-size: 14px; /* Reduzindo o tamanho do texto */
         }
     </style>
 </head>
@@ -72,7 +94,10 @@
     <div class="search-bar">
         <form method="GET">
             <input type="text" name="search" placeholder="Pesquisar receita...">
-            <button type="submit">Buscar</button>
+            <button type="submit" class="btn btn-primary btn-rounded">Buscar</button> <!-- Botão de buscar -->
+            <?php if (isset($_GET['search']) && !empty($_GET['search'])) { ?>
+                <a href="." class="btn btn-primary btn-rounded">Voltar</a> <!-- Botão de voltar com o mesmo estilo redondinho -->
+            <?php } ?>
         </form>
     </div>
 
@@ -80,10 +105,10 @@
     <?php
     // Array de receitas fictícias
     $receitas = array(
-        array("title" => "Bolo", "image" => "img/bolo.jpg", "description" => "Um delicioso bolo de chocolate.", "link" => "detalhesbolo.php"),
-        array("title" => "Sopa", "image" => "img/sopa.jpg", "description" => "Uma reconfortante sopa de legumes.", "link" => "detalhesopa.php"),
+        array("title" => "Bolo de Chocolate", "image" => "img/bolo.jpg", "description" => "Um delicioso bolo de chocolate.", "link" => "detalhesbolo.php"),
+        array("title" => "Sopa de Legumes", "image" => "img/sopa.jpg", "description" => "Uma reconfortante sopa de legumes.", "link" => "detalhesopa.php"),
         array("title" => "Salada de Frutas", "image" => "img/Salada.jpg", "description" => "Uma refrescante salada de frutas.", "link" => "detalhesalada.php"),
-        array("title" => "Coxinha", "image" => "img/coxinha.jpg", "description" => "Uma deliciosa coxinha.", "link" => "detalhescoxinha.php"),
+        array("title" => "Coxinha de Frango", "image" => "img/coxinha.jpg", "description" => "Uma deliciosa coxinha de frango.", "link" => "detalhescoxinha.php"),
         array("title" => "Strogonoff de Frango", "image" => "img/Strogonoff.jpg", "description" => "Uma ótima refeição para seu almoço", "link" => "detalhestrogonoff.php"),
         array("title" => "Salada Caesar com Ovos", "image" => "img/Saladac.jpg", "description" => "Uma maneira diferente de comer salada.", "link" => "detalhesaladac.php")
     );
@@ -95,18 +120,17 @@
         
         // Loop pelas receitas para verificar se a pesquisa corresponde a alguma receita
         foreach ($receitas as $receita) {
-            if (strtolower($receita['title']) === strtolower($search_term)) {
+            if (stripos($receita['title'], $search_term) !== false) {
                 echo '
-                <div class="card mb-4 shadow-sm">
+                <div class="card mb-3 shadow-sm">
                     <img src="' . $receita['image'] . '" class="card-img-top" alt="' . $receita['title'] . '">
                     <div class="card-body">
                         <h5 class="card-title">' . $receita['title'] . '</h5>
                         <p class="card-text">' . $receita['description'] . '</p>
-                        <a href="' . $receita['link'] . '" class="btn btn-primary">Ver Receita</a>
+                        <a href="' . $receita['link'] . '" class="btn btn-primary btn-rounded">Ver Receita</a>
                     </div>
                 </div>';
                 $found = true;
-                break;
             }
         }
         
@@ -119,13 +143,13 @@
         echo '<div class="row">';
         foreach ($receitas as $receita) {
             echo '
-            <div class="col-md-6">
-                <div class="card mb-4 shadow-sm">
+            <div class="col-md-4"> <!-- Reduzindo o tamanho da coluna -->
+                <div class="card mb-3 shadow-sm">
                     <img src="' . $receita['image'] . '" class="card-img-top" alt="' . $receita['title'] . '">
                     <div class="card-body">
                         <h5 class="card-title">' . $receita['title'] . '</h5>
                         <p class="card-text">' . $receita['description'] . '</p>
-                        <a href="' . $receita['link'] . '" class="btn btn-primary">Ver Receita</a>
+                        <a href="' . $receita['link'] . '" class="btn btn-primary btn-rounded">Ver Receita</a>
                     </div>
                 </div>
             </div>';
