@@ -1,0 +1,13 @@
+Danilo Linguanote Borges  - RA: 3024101630
+
+Karina de Oliveira Krisan - RA: 3020100204
+
+Luan Carlos de Andrade - RA: 3020106707
+
+Ryan Araujo Palma - RA: 3020200955
+
+
+Projeto desenvolvido em PHP para a matéria de Programação Web Profº Daniel Ferreira De Barros Jr.
+
+
+Copyright © 2024-2025 Grupo KLRD - Todos os direitos reservados
