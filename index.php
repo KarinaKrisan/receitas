@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
+ <!-- Karina de Oliveira Krisan  RA: 3020100204 -->
+ <!-- Danilo Linguanote Borges   RA: 3024101630-->
+ <!-- Luan Carlos de Andrade     RA: 3020106707 -->
+ <!-- Ryan Araujo Palma          RA: 3020200955-->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

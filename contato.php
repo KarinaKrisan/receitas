@@ -24,7 +24,10 @@
       <label for="mensagem">Mensagem:</label>
       <textarea class="form-control" id="mensagem" name="mensagem" rows="5" required></textarea>
     </div>
-    <button type="submit" class="btn btn-primary">Enviar</button>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary mr-2">Enviar</button>
+      <a href="index.php" class="btn btn-secondary">Voltar à página inicial</a>
+    </div>
   </form>
   <div id="message" class="mt-3">
     <?php
@@ -36,7 +39,6 @@
     }
     ?>
   </div>
-  <a href="index.php" class="btn btn-secondary mt-3">Voltar à página inicial</a>
 </div>
 
 <!-- Adicione os scripts do Bootstrap e do jQuery -->
