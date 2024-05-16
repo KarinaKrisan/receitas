@@ -55,12 +55,22 @@
     }
 
     @media (max-width: 768px) {
-      .ingredientes {
-        margin-bottom: 0; /* Remove o espaço abaixo dos ingredientes */
+      .titulo-imagem {
+        text-align: center; /* Centraliza o texto e a imagem */
+        position: relative; /* Define a posição relativa para o elemento pai */
       }
-      
+
+      .titulo {
+        position: relative; /* Define a posição relativa para o título */
+        z-index: 1; /* Coloca o título acima da imagem */
+      }
+
       .imagem-coxinha {
-        display: none; /* Esconde a imagem em dispositivos móveis */
+        display: block; /* Mostra a imagem em dispositivos móveis */
+        margin: auto; /* Centraliza a imagem */
+        position: relative; /* Define a posição relativa para a imagem */
+        top: auto; /* Reinicia a posição vertical */
+        transform: translateY(0); /* Reinicia o ajuste da posição vertical */
       }
     }
   </style>
@@ -72,6 +82,7 @@
       <div class="col-md-8 offset-md-2">
         <div class="titulo-imagem">
           <h2 class="titulo">Coxinha de Frango</h2>
+          <div class="imagem-coxinha"></div> <!-- Div para a imagem da coxinha -->
         </div>
         <hr>
         <div id="receita">
@@ -87,7 +98,6 @@
               <li>Sal, pimenta-do-reino e salsinha a gosto</li>
               <li>Óleo para fritar</li>
             </ul>
-            <div class="imagem-coxinha"></div> <!-- Div para a imagem da coxinha -->
           </div>
           <div class="instrucoes">
             <h5>Modo de Preparo:</h5>
