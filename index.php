@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+
+ <!-- Karina de Oliveira Krisan  RA: 3020100204 -->
+ <!-- Danilo Linguanote Borges   RA: 3024101630-->
+ <!-- Luan Carlos de Andrade     RA: 3020106707 -->
+ <!-- Ryan Araujo Palma          RA: 3020200955-->
+
+
+ <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -88,27 +95,6 @@
         /* Classe para centralizar texto */
         .centralizado {
             text-align: center;
-        }
-
-        /* Estilo para dispositivos móveis */
-        @media only screen and (max-width: 768px) {
-            .search-bar {
-                position: static;
-                margin-bottom: 10px;
-                text-align: center;
-            }
-
-            .search-bar input[type="text"] {
-                width: auto;
-                background-image: none;
-                padding: 6px 20px;
-                margin-right: 5px;
-            }
-
-            .search-bar button {
-                padding: 6px 10px;
-                margin-left: -5px;
-            }
         }
     </style>
 </head>
