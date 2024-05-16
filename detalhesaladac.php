@@ -75,25 +75,27 @@
         </div>
         <hr>
         <div id="receita">
-          <div class="ingredientes">
-            <h5>Ingredientes:</h5>
-            <ul>
-              <li>2 ovos cozidos</li>
-              <li>1 alface romana</li>
-              <li>Croutons</li>
-              <li>50g de queijo parmesão ralado</li>
-              <li>2 filés de anchovas</li>
-              <li>2 dentes de alho picados</li>
-              <li>1/4 xícara de azeite de oliva</li>
-              <li>2 colheres de sopa de suco de limão</li>
-              <li>1 colher de sopa de mostarda Dijon</li>
-              <li>Sal e pimenta a gosto</li>
-            </ul>
-            <div class="imagem-salada"></div> <!-- Div para a imagem da salada -->
-          </div>
-          <div class="instrucoes">
-            <h5>Modo de Preparo:</h5>
-            <p>Lave e rasgue as folhas de alface romana e coloque em uma tigela grande. Descasque os ovos cozidos e corte em fatias. Distribua os ovos cozidos sobre a alface. Adicione os croutons por cima. Em uma tigela pequena, amasse as anchovas com os dentes de alho picados. Adicione o suco de limão e a mostarda Dijon. Misture bem. Lentamente, adicione o azeite de oliva, batendo constantemente até emulsionar o molho. Tempere com sal e pimenta a gosto. Regue a salada com o molho Caesar preparado e polvilhe com queijo parmesão ralado. Sirva imediatamente.</p>
+          <div class="titulo-imagem">
+            <div class="ingredientes">
+              <h5>Ingredientes:</h5>
+              <ul>
+                <li>2 ovos cozidos</li>
+                <li>1 alface romana</li>
+                <li>Croutons</li>
+                <li>50g de queijo parmesão ralado</li>
+                <li>2 filés de anchovas</li>
+                <li>2 dentes de alho picados</li>
+                <li>1/4 xícara de azeite de oliva</li>
+                <li>2 colheres de sopa de suco de limão</li>
+                <li>1 colher de sopa de mostarda Dijon</li>
+                <li>Sal e pimenta a gosto</li>
+              </ul>
+              <div class="imagem-salada"></div> <!-- Div para a imagem da salada -->
+            </div>
+            <div class="instrucoes">
+              <h5>Modo de Preparo:</h5>
+              <p>Lave e rasgue as folhas de alface romana e coloque em uma tigela grande. Descasque os ovos cozidos e corte em fatias. Distribua os ovos cozidos sobre a alface. Adicione os croutons por cima. Em uma tigela pequena, amasse as anchovas com os dentes de alho picados. Adicione o suco de limão e a mostarda Dijon. Misture bem. Lentamente, adicione o azeite de oliva, batendo constantemente até emulsionar o molho. Tempere com sal e pimenta a gosto. Regue a salada com o molho Caesar preparado e polvilhe com queijo parmesão ralado. Sirva imediatamente.</p>
+            </div>
           </div>
         </div>
         <button class="btn btn-primary mt-3" onclick="voltar()">Voltar</button>
