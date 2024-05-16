@@ -54,7 +54,7 @@
       }
 
       .titulo {
-        font-size: 24px; /* Ajuste adicional para dispositivos móveis */
+        font-size: 24px;
       }
     }
   </style>
