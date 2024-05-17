@@ -40,16 +40,16 @@
       position: relative; /* Define a posição relativa para o elemento pai */
     }
 
-    .imagem-coxinha {
-      width: 150px; /* Define a largura da imagem */
-      height: 150px; /* Define a altura da imagem */
+    .imagem-bolo {
+      width: 150px; /* Reduzindo o tamanho da imagem */
+      height: 150px; /* Reduzindo o tamanho da imagem */
       border-radius: 50%; /* Torna o elemento redondo */
-      background-image: url("img/coxinha.jpg"); /* Imagem da coxinha */
+      background-image: url("img/coxinha.jpg"); /* Imagem da coxinha de frango */
       background-size: cover; /* Ajusta a imagem para cobrir todo o elemento */
       background-position: center; /* Centraliza a imagem */
-      position: absolute; /* Define a posição absoluta */
-      right: 20px; /* Define a posição à direita */
-      top: 50%; /* Define a posição verticalmente ao meio */
+      position: absolute; /* Altera a posição */
+      right: 20px; /* Centraliza à direita */
+      top: 50%; /* Alinha ao meio verticalmente */
       transform: translateY(-50%); /* Ajusta a posição vertical */
     }
 
@@ -58,7 +58,7 @@
         margin-bottom: 0; /* Remove o espaço abaixo dos ingredientes */
       }
       
-      .imagem-coxinha {
+      .imagem-bolo {
         display: none; /* Esconde a imagem em dispositivos móveis */
       }
     }
@@ -81,19 +81,18 @@
               <li>1 cebola picada</li>
               <li>2 dentes de alho picados</li>
               <li>2 colheres de sopa de óleo</li>
-              <li>1/2 xícara de molho de tomate</li>
+              <li>1 xícara de caldo de frango</li>
+              <li>1 xícara de farinha de trigo</li>
+              <li>1/2 xícara de leite</li>
               <li>Sal e pimenta a gosto</li>
-              <li>2 xícaras de farinha de trigo</li>
-              <li>2 xícaras de caldo de frango</li>
-              <li>1 colher de sopa de manteiga</li>
               <li>Farinha de rosca para empanar</li>
               <li>Óleo para fritar</li>
             </ul>
-            <div class="imagem-coxinha"></div> <!-- Div para a imagem da coxinha -->
+            <div class="imagem-bolo"></div> <!-- Novo div para a imagem da coxinha -->
           </div>
           <div class="instrucoes">
             <h5>Modo de Preparo:</h5>
-            <p>Refogue a cebola e o alho no óleo até dourar. Adicione o frango desfiado e o molho de tomate, temperando com sal e pimenta. Cozinhe por alguns minutos. Em outra panela, ferva o caldo de frango com a manteiga, adicione a farinha de trigo de uma vez e mexa até formar uma massa homogênea. Deixe esfriar. Modele a massa em pequenas porções, recheie com o frango e feche, formando as coxinhas. Empane na farinha de rosca e frite em óleo quente até dourar. Sirva quente.</p>
+            <p>Refogue a cebola e o alho no óleo até dourarem. Adicione o frango desfiado e tempere com sal e pimenta. Reserve. Em uma panela, aqueça o caldo de frango com o leite e adicione a farinha de trigo, mexendo até formar uma massa homogênea. Cozinhe até soltar do fundo da panela. Deixe esfriar. Pegue pequenas porções da massa, abra na mão e coloque o recheio de frango. Modele as coxinhas e passe na farinha de rosca. Frite em óleo quente até dourar. Sirva quente.</p>
           </div>
         </div>
         <button class="btn btn-primary mt-3" onclick="voltar()">Voltar</button>
