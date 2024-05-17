@@ -77,20 +77,23 @@
           <div class="ingredientes">
             <h5>Ingredientes:</h5>
             <ul>
-              <li>2 xícaras de caldo de frango</li>
-              <li>2 colheres de sopa de manteiga</li>
-              <li>2 xícaras de farinha de trigo</li>
-              <li>1 peito de frango cozido e desfiado</li>
+              <li>500g de peito de frango desfiado</li>
               <li>1 cebola picada</li>
               <li>2 dentes de alho picados</li>
-              <li>Sal, pimenta-do-reino e salsinha a gosto</li>
+              <li>2 colheres de sopa de óleo</li>
+              <li>1/2 xícara de molho de tomate</li>
+              <li>Sal e pimenta a gosto</li>
+              <li>2 xícaras de farinha de trigo</li>
+              <li>2 xícaras de caldo de frango</li>
+              <li>1 colher de sopa de manteiga</li>
+              <li>Farinha de rosca para empanar</li>
               <li>Óleo para fritar</li>
             </ul>
             <div class="imagem-coxinha"></div> <!-- Div para a imagem da coxinha -->
           </div>
           <div class="instrucoes">
             <h5>Modo de Preparo:</h5>
-            <p>Em uma panela, aqueça o caldo de frango com a manteiga até ferver. Adicione a farinha de trigo de uma vez e mexa vigorosamente até formar uma massa homogênea que desgrude do fundo da panela. Reserve a massa. Em outra panela, refogue a cebola e o alho em um pouco de óleo. Adicione o frango desfiado e tempere com sal, pimenta e salsinha a gosto. Misture bem. Pegue porções da massa de coxinha, abra na palma da mão, coloque um pouco do recheio de frango e modele em formato de coxinha. Frite em óleo quente até dourar. Escorra em papel toalha e sirva em seguida.</p>
+            <p>Refogue a cebola e o alho no óleo até dourar. Adicione o frango desfiado e o molho de tomate, temperando com sal e pimenta. Cozinhe por alguns minutos. Em outra panela, ferva o caldo de frango com a manteiga, adicione a farinha de trigo de uma vez e mexa até formar uma massa homogênea. Deixe esfriar. Modele a massa em pequenas porções, recheie com o frango e feche, formando as coxinhas. Empane na farinha de rosca e frite em óleo quente até dourar. Sirva quente.</p>
           </div>
         </div>
         <button class="btn btn-primary mt-3" onclick="voltar()">Voltar</button>
