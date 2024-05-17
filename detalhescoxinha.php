@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Detalhes da Receita de Coxinha de Frango</title>
+  <title>Detalhes da Receita da Coxinha de Frango</title>
   <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <style>
@@ -40,11 +40,11 @@
       position: relative; /* Define a posição relativa para o elemento pai */
     }
 
-    .imagem-bolo {
+    .imagem-coxinha {
       width: 150px; /* Reduzindo o tamanho da imagem */
       height: 150px; /* Reduzindo o tamanho da imagem */
       border-radius: 50%; /* Torna o elemento redondo */
-      background-image: url("img/coxinha.jpg"); /* Imagem da coxinha de frango */
+      background-image: url("img/coxinha.jpg"); /* Imagem da coxinha */
       background-size: cover; /* Ajusta a imagem para cobrir todo o elemento */
       background-position: center; /* Centraliza a imagem */
       position: absolute; /* Altera a posição */
@@ -58,7 +58,7 @@
         margin-bottom: 0; /* Remove o espaço abaixo dos ingredientes */
       }
       
-      .imagem-bolo {
+      .imagem-coxinha {
         display: none; /* Esconde a imagem em dispositivos móveis */
       }
     }
@@ -77,22 +77,23 @@
           <div class="ingredientes">
             <h5>Ingredientes:</h5>
             <ul>
-              <li>500g de peito de frango desfiado</li>
+              <li>500g de peito de frango cozido e desfiado</li>
               <li>1 cebola picada</li>
               <li>2 dentes de alho picados</li>
-              <li>2 colheres de sopa de óleo</li>
-              <li>1 xícara de caldo de frango</li>
-              <li>1 xícara de farinha de trigo</li>
-              <li>1/2 xícara de leite</li>
+              <li>2 tomates sem pele e sem sementes picados</li>
               <li>Sal e pimenta a gosto</li>
+              <li>Salsinha picada a gosto</li>
+              <li>2 xícaras de farinha de trigo</li>
+              <li>2 xícaras de caldo de galinha</li>
+              <li>1 colher de sopa de manteiga</li>
               <li>Farinha de rosca para empanar</li>
               <li>Óleo para fritar</li>
             </ul>
-            <div class="imagem-bolo"></div> <!-- Novo div para a imagem da coxinha -->
+            <div class="imagem-coxinha"></div> <!-- Novo div para a imagem da coxinha -->
           </div>
           <div class="instrucoes">
             <h5>Modo de Preparo:</h5>
-            <p>Refogue a cebola e o alho no óleo até dourarem. Adicione o frango desfiado e tempere com sal e pimenta. Reserve. Em uma panela, aqueça o caldo de frango com o leite e adicione a farinha de trigo, mexendo até formar uma massa homogênea. Cozinhe até soltar do fundo da panela. Deixe esfriar. Pegue pequenas porções da massa, abra na mão e coloque o recheio de frango. Modele as coxinhas e passe na farinha de rosca. Frite em óleo quente até dourar. Sirva quente.</p>
+            <p>Refogue a cebola e o alho na manteiga até ficarem dourados. Adicione o frango desfiado, os tomates, o sal, a pimenta e a salsinha, e cozinhe até formar um recheio homogêneo. Em uma panela, coloque o caldo de galinha e a manteiga para ferver. Adicione a farinha de trigo de uma vez e mexa até desgrudar da panela. Deixe a massa esfriar, faça pequenas bolas, abra e recheie com o frango. Modele em forma de coxinhas, passe na farinha de rosca e frite em óleo quente até dourar. Sirva quente.</p>
           </div>
         </div>
         <button class="btn btn-primary mt-3" onclick="voltar()">Voltar</button>
